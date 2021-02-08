@@ -1,12 +1,12 @@
 title: Ruffle
 # email: mwelsh@gmail.com
 description: >- 
-  Flash Player emulator written in the Rust programming language
+  使用 Rust 语言编写的 Flash Player 模拟器
 baseurl: ""
 #url: "https://ruffle.rs"
 # twitter_username: jekyllrb
 github_username:  ruffle-rs
-github_url: "https://github.com/ruffle-rs/ruffle"
+github_url: "https://github.com/imgradeone/ruffle-website-cn"
 repository: ruffle-rs/ruffle
 markdown: kramdown
 plugins:
