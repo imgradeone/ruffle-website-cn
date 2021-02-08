@@ -31,12 +31,12 @@ title: Ruffle
 				run();
 			</script>
 			<p>
-				<em>ruffle</em> is a Flash Player emulator built in the Rust programming language.
+				<em>ruffle</em> 是使用 Rust 语言编写的 Flash Player 模拟器。
 			</p>
 
 			<ul>
-				<li><a href="#what-is-ruffle">read more</a></li>
-				<li><a href="https://ruffle.rs/demo" target="_blank">demo</a></li>
+				<li><a href="#what-is-ruffle">了解更多</a></li>
+				<li><a href="https://ruffle.rs/demo" target="_blank">试用</a></li>
 				<li><a href="https://discord.gg/J8hgCQN" target="_blank">discord</a></li>
 			</ul>
 			<a class="header-down-arrow" href="#what-is-ruffle">
@@ -44,25 +44,18 @@ title: Ruffle
 			</a>
 		</section>
 		<section class="section content">
-			<h2 id="what-is-ruffle">What is ruffle</h2>
+			<h2 id="what-is-ruffle">Ruffle 是什么</h2>
 			<div class="row">
 				<div class="col-base col-lg col-lg-auto col-img">
 					<img src="{{ "/assets/logo.png" | relative_url }}" class="img-fluid my-3 mx-auto">
 				</div>
 				<div class="col-base col-lg">
 					<p>
-						Ruffle is a Flash Player emulator written in Rust. Ruffle runs natively on all modern operating
-						systems as a standalone application, and on all modern browsers through the use of WebAssembly.
-						Leveraging the safety of the modern browser sandbox and the memory safety guarantees of Rust,
-						we can confidently avoid all the security pitfalls that Flash had a reputation for.
-						Ruffle puts Flash back on the web, where it belongs - including iOS and Android!
+						Ruffle 是使用 Rust 语言编写的 Flash Player 模拟器。Ruffle 可以在所有现代设备里以原生应用程序的形式运行，也可以在所有现代浏览器中借助 WebAssembly 运行。利用现代浏览器沙箱的安全性和 Rust 的内存安全保障，我们可以十分自信地抛开 Flash 那些众所周知的所有安全隐患。
+						Ruffle 将 Flash 带回网络，甚至兼容 iOS 和 Android！
 					</p>
 					<p>
-						Designed to be easy to use and install, users or website owners may install the web version
-						of Ruffle and existing flash content will "just work", with no extra configuration required.
-						Ruffle will detect all existing Flash content on a website and automatically "polyfill"
-						it into a Ruffle player, allowing seamless and transparent upgrading of websites that still
-						rely on Flash content.
+						得益于简单易用的设计，用户和网站站长可以轻松安装 Ruffle 的网页版本，现有的 Flash 内容就会“正常工作”，不需要额外配置。Ruffle 会自动查找页面上的所有 Flash 内容，并且自动将其“改造”成 Ruffle 的播放器，让那些还在依赖 Flash 的网站无缝转型升级。
 					</p>
 					<p>
 						Ruffle is an entirely open source project maintained by volunteers. We're all passionate
@@ -92,13 +85,13 @@ title: Ruffle
 
 		</section>
 		<section class="section content">
-			<h2 id="usage">Usage</h2>
+			<h2 id="usage">使用方式</h2>
 			<div class="row">
 				<div class="col-base col-sm col-sm-3">
 					<img src="{{ "/assets/undraw_design_components.svg" | relative_url }}" class="img-fluid">
 				</div>
 				<div class="col-base col-lg col-lg-9">
-					<h3>Installing on a website you own</h3>
+					<h3>在自己的网站上安装</h3>
 					<p>
 						Download the 'standalone' version of Ruffle from <a href="#releases">our releases</a>,
 						and include the following JavaScript on any page with Flash content:
@@ -125,14 +118,12 @@ title: Ruffle
 			</div>
 			<div class="row mt-2">
 				<div class="col-base col-lg col-lg-6">
-					<h3>Installing the browser extension</h3>
+					<h3>安装浏览器插件</h3>
 					<p>
-						If you visit websites that have Flash content but aren't using Ruffle, or you want to ensure
-						you're using the latest and greatest version of Ruffle on every website, then our browser
-						extension is the perfect thing for you!
+						如果你访问一些带有 Flash 内容却没安装 Ruffle 的网站，或者你只是想让自己的 Ruffle 在所有网站里都是最新版本，那么浏览器插件是个不错的选择！
 					</p>
 					<p>
-						Until our first release, we currently only ship unsigned browser extensions.
+						在正式版发布之前，我们只会发布未经签名的浏览器插件。
 						To use these, first download the appropriate one for your browser from
 						<a href="#releases">our releases</a>, and then install it manually.
 					</p>
@@ -141,10 +132,10 @@ title: Ruffle
 						<h4>Chrome</h4>
 						<ul>
 						<li>Click the "Chrome / Edge / Safari" link.</li>
-    						<li>Extract the downloaded zip file somewhere.</li>
-    						<li>Navigate to <code>chrome://extensions/</code></li>
-    						<li>Turn on Developer mode in the top right corner.</li>
-    						<li>Click Load unpacked.</li>
+    						<li>在某个地方解压下载的 zip 文件。</li>
+    						<li>访问 <code>chrome://extensions/</code></li>
+    						<li>在右上角打开<b>开发者模式</b></li>
+    						<li>点击“加载已解压的扩展程序”=。</li>
     						<li>Select the folder you extracted the extension to.</li>
 						</ul>
 					</div>
@@ -162,11 +153,9 @@ title: Ruffle
 					</div>
 				</div>
 				<div class="col-base col-lg col-lg-6">
-					<h3>Using the desktop application</h3>
+					<h3>使用桌面客户端</h3>
 					<p>
-						If you want to run Flash content on your computer without a browser in-between, we have native
-						applications that will take full advantage of your GPU and system resources to get those extra
-						frames when playing the original Meat Boy.
+						如果你不想用浏览器，只想在电脑上运行 Flash 内容，我们也开发了原生程序，以便发挥你电脑 100% 的 GPU 性能和电脑资源，让你在愉快玩森林冰火人的时候获得更多帧数。
 					</p>
 					<p>
 						Currently most options are accessed via the command line, but we intend to develop a GUI soon
@@ -185,7 +174,7 @@ title: Ruffle
 			</div>
 		</section>
 		<section class="section content">
-			<h2 id="releases">Releases</h2>
+			<h2 id="releases">发行版本</h2>
 			<div class="row">
 				<div class="col-base col-sm col-sm-2">
 					<img src="{{ "/assets/undraw_relaunch_day.svg" | relative_url }}" class="img-fluid">
@@ -278,8 +267,7 @@ title: Ruffle
 
 					<p>
 						Ruffle is still in active development and we release nightly development builds every day,
-						as long as some code changed. Whilst we try to keep nightly builds in working order,
-						no guarantees can be made.
+						as long as some code changed. 虽然我们尽力保持每晚发布一个版本，但并不是 100% 保证每个晚上都会发布。
 					</p>
 					<table class="table table-responsive-lg table-dark downloads">
 						<thead>
@@ -361,7 +349,7 @@ title: Ruffle
 			</div>
 		</section>
 		<section class="section content">
-			<h2 id="compatibility">Compatibility</h2>
+			<h2 id="compatibility">兼容性</h2>
 			<div class="row">
 				<div class="col-base col-sm col-sm-3">
 					<img src="{{ "/assets/undraw_progressive_app.svg" | relative_url }}" class="img-fluid">
@@ -448,7 +436,7 @@ title: Ruffle
 			</div>
 		</section>
 		<section class="section content">
-			<h2 id="get-involved">Get involved</h2>
+			<h2 id="get-involved">参与项目</h2>
 			<div class="row">
 				<div class="col-base col-sm col-sm-2">
 					<img src="{{ "/assets/undraw_launch_day.svg" | relative_url }}" class="img-fluid">
