@@ -6,7 +6,7 @@ baseurl: ""
 #url: "https://ruffle.rs"
 # twitter_username: jekyllrb
 github_username:  ruffle-rs
-github_url: "https://github.com/imgradeone/ruffle-website-cn"
+github_url: "https://github.com/ruffle-rs/ruffle"
 repository: ruffle-rs/ruffle
 markdown: kramdown
 plugins:

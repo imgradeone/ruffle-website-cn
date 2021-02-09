@@ -58,12 +58,8 @@ title: Ruffle
 						得益于简单易用的设计，用户和网站站长可以轻松安装 Ruffle 的网页版本，现有的 Flash 内容就会“正常工作”，不需要额外配置。Ruffle 会自动查找页面上的所有 Flash 内容，并且自动将其“改造”成 Ruffle 的播放器，让那些还在依赖 Flash 的网站无缝转型升级。
 					</p>
 					<p>
-						Ruffle is an entirely open source project maintained by volunteers. We're all passionate
-						about the preservation of internet history, and we were drawn to working on this project to help
-						preserve the many websites and plethora of content that will no longer be accessible when
-						users can no longer run the official Flash Player. If you would like to help support this
-						project, we welcome all contributions of any kind - even if it's just playing some old games
-						and seeing how well they run.
+						Ruffle 是完全开源的、由志愿者维护的项目。我们热衷于保护互联网的历史，也致力于让旧网站继续保持生命力，让那些由于官方 Flash Player 停止维护而导致用户无法正常查看的内容能够继续维持下去。
+						如果你想支持这个项目，我们欢迎任何形式的贡献 —— 乃至于仅仅使用 Ruffle 来试玩老游戏，测试它能不能正常工作。
 					</p>
 				</div>
 			</div>
@@ -93,8 +89,7 @@ title: Ruffle
 				<div class="col-base col-lg col-lg-9">
 					<h3>在自己的网站上安装</h3>
 					<p>
-						Download the 'standalone' version of Ruffle from <a href="#releases">our releases</a>,
-						and include the following JavaScript on any page with Flash content:
+						从<a href="#releases">发布版本</a>处下载“单独”版的 Ruffle，在有 Flash 内容的页面上添加下面的 JavaScript 代码：
 						{% capture javascript_installation %}<script src="path/to/ruffle/ruffle.js"></script>{% endcapture %}
 						<pre>{{ javascript_installation |  xml_escape }}</pre>
 					</p>
@@ -123,31 +118,29 @@ title: Ruffle
 						如果你访问一些带有 Flash 内容却没安装 Ruffle 的网站，或者你只是想让自己的 Ruffle 在所有网站里都是最新版本，那么浏览器插件是个不错的选择！
 					</p>
 					<p>
-						在正式版发布之前，我们只会发布未经签名的浏览器插件。
-						To use these, first download the appropriate one for your browser from
-						<a href="#releases">our releases</a>, and then install it manually.
+						在正式版发布之前，我们只会发布未经签名的浏览器插件。如果需要使用插件，首先从<a href="#releases">发行版本</a>处下载对应浏览器版本的插件，然后手动安装。
 					</p>
 					<div class="row mt-2">
 						<div class="col-base col-lg col-lg-6">
 						<h4>Chrome</h4>
 						<ul>
-						<li>Click the "Chrome / Edge / Safari" link.</li>
+							<li>点击 "Chrome / Edge / Safari" 链接。</li>
     						<li>在某个地方解压下载的 zip 文件。</li>
     						<li>访问 <code>chrome://extensions/</code></li>
     						<li>在右上角打开<b>开发者模式</b></li>
-    						<li>点击“加载已解压的扩展程序”=。</li>
-    						<li>Select the folder you extracted the extension to.</li>
+    						<li>点击“加载已解压的扩展程序”。</li>
+    						<li>选择你刚刚解压插件的文件夹。</li>
 						</ul>
 					</div>
 					<div class="col-base col-lg col-lg-6">
 						<h4>Firefox</h4>
 						<ul>
-						<li>Right-click the Firefox .xpi download link.</li>
-						<li>Click "Save Link As..."</li>
-    						<li>Navigate to <code>about:debugging</code>.</li>
-    						<li>Click on This Firefox.</li>
-    						<li>Click Load Temporary Add-on...</li>
-    						<li>Select the .xpi that you downloaded.</li>
+							<li>右键点击 Firefox .xpi 的下载链接。</li>
+							<li>点击“从链接另存文件为...”</li>
+    						<li>访问<code>about:debugging</code>。</li>
+    						<li>点击“此 Firefox”。</li>
+    						<li>点击“临时载入附加组件...”</li>
+    						<li>选择你刚刚下载的 .xpi 文件。</li>
 						</ul>
 					</div>
 					</div>
@@ -158,8 +151,7 @@ title: Ruffle
 						如果你不想用浏览器，只想在电脑上运行 Flash 内容，我们也开发了原生程序，以便发挥你电脑 100% 的 GPU 性能和电脑资源，让你在愉快玩森林冰火人的时候获得更多帧数。
 					</p>
 					<p>
-						Currently most options are accessed via the command line, but we intend to develop a GUI soon
-						for ease of use. First, download the appropriate executable for your operating system from
+						目前绝大部分选项仅在命令行提供支持，但我们也会在之后开发 GUI 界面版本，方便大家使用。First, download the appropriate executable for your operating system from
 						<a href="#releases">our releases</a>.
 					</p>
 					<p>
@@ -188,11 +180,11 @@ title: Ruffle
 						<table class="table table-responsive-lg table-dark downloads">
 							<thead>
 								<tr>
-									<th>Version</th>
-									<th>Date</th>
-									<th>Desktop</th>
-									<th>Browser Extension</th>
-									<th>Website</th>
+									<th>版本</th>
+									<th>日期</th>
+									<th>桌面版</th>
+									<th>浏览器插件</th>
+									<th>网站版</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -216,9 +208,9 @@ title: Ruffle
 
 												{% assign macos = release.assets | where_exp:"item", "item.name contains '_mac'" | first %}
 												{% if macos != nil %}
-													<li><a href="{{ macos.browser_download_url}}" target="_blank">Mac OS</a></li>
+													<li><a href="{{ macos.browser_download_url}}" target="_blank">macOS</a></li>
 												{% else %}
-													<li style="text-decoration: line-through">Mac OS</li>
+													<li style="text-decoration: line-through">macOS</li>
 												{% endif %}
 
 												{% assign windows = release.assets | where_exp:"item", "item.name contains '_windows'" | first %}
@@ -251,9 +243,9 @@ title: Ruffle
 											<ul class="row">
 												{% assign selfhosted = release.assets | where_exp:"item", "item.name contains '_selfhosted'" | first %}
 												{% if webkit != nil %}
-													<li><a href="{{ selfhosted.browser_download_url}}" target="_blank">Self Hosted</a></li>
+													<li><a href="{{ selfhosted.browser_download_url}}" target="_blank">自建</a></li>
 												{% else %}
-													<li style="text-decoration: line-through">Self Hosted</li>
+													<li style="text-decoration: line-through">自建</li>
 												{% endif %}
 											</ul>
 										</td>
@@ -262,21 +254,23 @@ title: Ruffle
 							</tbody>
 						</table>
 
-						<h3>Nightly Builds</h3>
+						<h3>每夜发布版</h3>
 					{% endif %}
 
 					<p>
-						Ruffle is still in active development and we release nightly development builds every day,
-						as long as some code changed. 虽然我们尽力保持每晚发布一个版本，但并不是 100% 保证每个晚上都会发布。
+						Ruffle 仍处于活跃开发阶段，我们会在每天晚上发布一个开发版本，保证代码更新。虽然我们尽力保持每晚发布一个版本，但并不是 100% 保证每个晚上都会发布。
+					</p>
+					<p>
+						*此处的版本不一定是最新版本，请从 <a href="https://ruffle.rs/#releases">Ruffle 的英文官网</a>或者 <a href="https://github.com/ruffle-rs/ruffle/releases">Ruffle 的官方 GitHub Releases</a>获取最新版本。
 					</p>
 					<table class="table table-responsive-lg table-dark downloads">
 						<thead>
 							<tr>
-								<th>Version</th>
-								<th>Date</th>
-								<th>Desktop</th>
-								<th>Browser Extension</th>
-								<th>Website</th>
+								<th>版本</th>
+								<th>日期</th>
+								<th>桌面版</th>
+								<th>浏览器插件</th>
+								<th>网站版</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -300,9 +294,9 @@ title: Ruffle
 
 											{% assign macos = release.assets | where_exp:"item", "item.name contains '_mac'" | first %}
 											{% if macos != nil %}
-												<li><a href="{{ macos.browser_download_url}}" target="_blank">Mac OS</a></li>
+												<li><a href="{{ macos.browser_download_url}}" target="_blank">macOS</a></li>
 											{% else %}
-												<li style="text-decoration: line-through">Mac OS</li>
+												<li style="text-decoration: line-through">macOS</li>
 											{% endif %}
 
 											{% assign windows = release.assets | where_exp:"item", "item.name contains '_windows'" | first %}
@@ -335,9 +329,9 @@ title: Ruffle
 										<ul class="row">
 											{% assign selfhosted = release.assets | where_exp:"item", "item.name contains '_selfhosted'" | first %}
 											{% if webkit != nil %}
-												<li><a href="{{ selfhosted.browser_download_url}}" target="_blank">Self Hosted</a></li>
+												<li><a href="{{ selfhosted.browser_download_url}}" target="_blank">自建</a></li>
 											{% else %}
-												<li style="text-decoration: line-through">Self Hosted</li>
+												<li style="text-decoration: line-through">自建</li>
 											{% endif %}
 										</ul>
 									</td>
@@ -350,6 +344,9 @@ title: Ruffle
 		</section>
 		<section class="section content">
 			<h2 id="compatibility">兼容性</h2>
+			<p>
+				*此处的进度并不是实时更新的，请从 <a href="https://ruffle.rs/#compatibility">Ruffle 的英文官网</a>获取最新进度。
+			</p>
 			<div class="row">
 				<div class="col-base col-sm col-sm-3">
 					<img src="{{ "/assets/undraw_progressive_app.svg" | relative_url }}" class="img-fluid">
@@ -358,11 +355,11 @@ title: Ruffle
 				<div class="col-base col-lg">
 					<h3>ActionScript</h3>
 					<p>
-						ActionScript is the language which Flash uses to make interactive content.
-						It is primarily split into two groups:
+						ActionScript 是 Flash 用于制作交互内容的语言。
+						它目前分为 2 个分支：
 						"AVM 1" (ActionScript 1 &amp; 2)
-						and
-						"AVM 2" (ActionScript 3).
+						和
+						"AVM 2" (ActionScript 3)。
 					</p>
 				</div>
 			</div>
@@ -370,20 +367,19 @@ title: Ruffle
 				<div class="col-base col-lg">
 					<h4>AVM 1</h4>
 					<p>
-						AVM 1 is ActionScript 1 and ActionScript 2.
-						All movies made before Flash Player 9 (June 2006) will be made with AVM 1,
-						and it remained supported &amp; available to authors until the release of
-						Flash Professional CC (2013).
+						AVM 1 指代 ActionScript 1 和 ActionScript 2。
+						在 Flash Player 9（2006 年 6 月）前制作的影片是使用 AVM 1 制作的，它的支持与可用性持续到了 
+						Flash Professional CC（2013）。
 					</p>
 
 					<p>
-						For in-depth details, please follow our
+						更多详情请关注
 						<a href="https://github.com/ruffle-rs/ruffle/issues/310" target="_blank" rel="nofollow">
-							AVM 1 tracking issue on GitHub.
-						</a>
+							GitHub 上的 AVM 1 跟踪 Issue（英文）
+						</a>。
 					</p>
 					<p>
-					<h5>ActionScript 1 &amp; 2 Language <code>70%</code></h5>
+					<h5>ActionScript 1 &amp; 2 语言 <code>70%</code></h5>
 					<div class="meter" title="70%">
 						<span style="width:70%;"><span class="progress"></span></span>
 					</div>
@@ -399,28 +395,24 @@ title: Ruffle
 				<div class="col-base col-lg">
 					<h4>AVM 2</h4>
 					<p>
-						AVM2 is ActionScript 3, which was introduced with Flash Player 9 (June 2006).
-						After the release of Flash Professional CC (2013), authors are required to use
-						ActionScript 3 - making any movie made after that date very likely to fall under
-						this category.
+						AVM2 是 ActionScript 3，于 Flash Player 9（2006 年 6 月）发布。
+						在 Flash Professional CC（2013）发布后，创作者必须使用 ActionScript 3 创作内容 —— 一般在 2013 年之后发布的 Flash 作品就属于这个分类。
 					</p>
 
 					<p>
-						Ruffle is still working on the foundational support for AVM 2, and does not yet
-						support any content that requires it. A warning will be placed in the log when
-						you attempt to play AVM 2 content, for this reason. We do plan on supporting this
-						soon!
+						Ruffle 仍在保证 AVM 2 的基础支持，也暂时不支持观看任何基于 AVM 2 的内容，因此在尝试播放这些内容时会有警告提示。
+						我们之后会计划支持的！
 					</p>
 
 					<p>
-						For in-depth details, please follow our
+						更多详情请关注
 						<a href="https://github.com/ruffle-rs/ruffle/issues/1368" target="_blank" rel="nofollow">
-							AVM 2 tracking issue on GitHub.
-						</a>
+							GitHub 上的 AVM 2 跟踪 Issue（英文）
+						</a>。
 					</p>
 
 					<p>
-					<h5>ActionScript 3 Language <code>5%</code></h5>
+					<h5>ActionScript 3 语言 <code>5%</code></h5>
 					<div class="meter" title="5%">
 						<span style="width:5%;"><span class="progress"></span></span>
 					</div>
@@ -442,7 +434,7 @@ title: Ruffle
 					<img src="{{ "/assets/undraw_launch_day.svg" | relative_url }}" class="img-fluid">
 				</div>
 				<div class="col-base col-lg">
-					<h3>♥️ How to help the project</h3>
+					<h3>♥️ 如何帮助这个项目</h3>
 					<p>
 						We are an entirely open source project and do this for the sake of preserving history,
 						and we are not a large team at that.
@@ -452,7 +444,7 @@ title: Ruffle
 
 				</div>
 				<div class="col-base col-lg">
-					<h3>🖥️ Contributing code</h3>
+					<h3>🖥️ 贡献代码</h3>
 					<p>
 						There are two main codebases in two languages: The actual player in Rust, and the web interface
 						&amp; browser UI in JavaScript. If you have any experience in either area and would like to
@@ -469,7 +461,7 @@ title: Ruffle
 			</div>
 			<div class="row">
 				<div class="col-base col-lg">
-					<h3>🕹️ Testing content</h3>
+					<h3>🕹️ 测试内容</h3>
 					<p>
 						Arguably more important than contributing code is testing Ruffle out.
 						Go install Ruffle and try out your favourite games and animations.
@@ -482,7 +474,7 @@ title: Ruffle
 					</p>
 				</div>
 				<div class="col-base col-lg">
-					<h3>💲 Sponsor the project</h3>
+					<h3>💲 赞助项目</h3>
 					<p>
 						If you are able and willing to, we welcome any financial support to help us fund the project
 						going
@@ -496,23 +488,17 @@ title: Ruffle
 					</p>
 				</div>
 				<div class="col-base col-lg">
-					<h3>💬 Spread the word!</h3>
+					<h3>💬 和别人分享！</h3>
 					<p>
-						Is your favourite Flash-based site shutting down? Let them know they can add one JavaScript
-						file
-						and keep it running!
-						Feeling nostalgic for some old Flash games? Go play some on Newgrounds with Ruffle
-						installed, and
-						tell your friends about it!
-						Maybe you're a streamer and looking for some silly content? There's literally decades' worth,
-						now
-						unlocked and accessible once more.
+						你当年最喜欢的 Flash 网站是否面临着关停危机？赶快告诉站长们，他们可以通过一个小小的 JavaScript 文件复活他们的网站！
+						怀念那些童年 Flash 小游戏吗？安装 Ruffle 插件，访问 Newgrounds（或者国内的 7k7k），然后和你的伙伴们交流一下感受！
+						也许你是个正在寻找沙雕内容的主播，现在你又有新活整了，几十年的宝藏现在可以重新挖掘。
 					</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-base col-lg">
-					<h3>💎 Diamond Sponsors</h3>
+					<h3>💎 钻石赞助商</h3>
 					<p>
 						We'd like to thank all of our sponsors, who help make this project possible.
 						Below are our Diamond level sponsors, without whom we would not be here. Thank you.
