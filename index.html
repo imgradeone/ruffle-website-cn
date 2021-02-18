@@ -89,25 +89,24 @@ title: Ruffle
 				<div class="col-base col-lg col-lg-9">
 					<h3>在自己的网站上安装</h3>
 					<p>
-						从<a href="#releases">发布版本</a>处下载“单独”版的 Ruffle，在有 Flash 内容的页面上添加下面的 JavaScript 代码：
+						从<a href="#releases">发行版本</a>处下载“单独”版的 Ruffle，在有 Flash 内容的页面上添加下面的 JavaScript 代码：
 						{% capture javascript_installation %}<script src="path/to/ruffle/ruffle.js"></script>{% endcapture %}
 						<pre>{{ javascript_installation |  xml_escape }}</pre>
 					</p>
 					<p>
-						You'll need to make sure your web server is configured to serve <code>.wasm</code> files
-						correctly, so please visit
+						您需要确保服务器已经配置好，以正常运行 <code>.wasm</code> 文件，如果您需要帮助，请查看
 						<a href="https://github.com/ruffle-rs/ruffle/wiki/Using-Ruffle#configure-wasm-mime-type"
 							target="_blank">
-							our wiki
+							我们的 Wiki（英文）
 						</a>
-						if you need help with that.
+						。
 					</p>
 					<p>
-						For advanced usage, consult
+						如果想了解进阶使用方法，请前往
 						<a href="https://github.com/ruffle-rs/ruffle/wiki/Using-Ruffle#javascript-api" target="_blank">
-							our documentation
+							我们的文档（英文）
 						</a>
-						for our JavaScript API and installation options.
+						了解 JavaScript API 和安装选项。
 					</p>
 				</div>
 			</div>
@@ -155,9 +154,9 @@ title: Ruffle
 						<a href="#releases">our releases</a>.
 					</p>
 					<p>
-						To use Ruffle, simply double-click the executable and select the SWF file you wish to play.
-						Alternatively, type a command such as 
-						<code>ruffle filename.swf</code> or <code>ruffle https://example.com/filename.swf</code>.
+						只需要双击可执行文件，选择你想玩的 SWF 文件，就可以开始使用 Ruffle。
+						或者，在命令行输入 
+						<code>ruffle filename.swf</code> 或者 <code>ruffle https://example.com/filename.swf</code> 也可以。
 						We also provide more advanced options if you wish to control how this file is played.
 						To view the full options available, run
 						<code>ruffle --help</code>.
@@ -436,8 +435,7 @@ title: Ruffle
 				<div class="col-base col-lg">
 					<h3>♥️ 如何帮助这个项目</h3>
 					<p>
-						We are an entirely open source project and do this for the sake of preserving history,
-						and we are not a large team at that.
+						我们是完全开源的项目，旨在于保存互联网历史，但我们也并不是大团队。
 						We absolutely welcome and request your help if you are willing to provide it.
 						There are 4 main ways to help this project, and we will be extremely grateful for any help provided.
 					</p>
@@ -476,11 +474,8 @@ title: Ruffle
 				<div class="col-base col-lg">
 					<h3>💲 赞助项目</h3>
 					<p>
-						If you are able and willing to, we welcome any financial support to help us fund the project
-						going
-						forward. With your help, we can afford to spend more time dedicated to Ruffle, and pay for
-						expenses
-						such as build servers and hosting.
+						如果您有能力并且愿意，我们欢迎任何帮助我们继续改善项目的财力支持。
+						得益于您的帮助，我们才可以用更多时间打磨 Ruffle，同时也可以支付起服务器和托管费用。
 						We accept donations and sponsorships through Open Source Collective 501(c)(6). For more
 						information,
 						or to view the options available for sponsoring the project, please visit
@@ -500,8 +495,8 @@ title: Ruffle
 				<div class="col-base col-lg">
 					<h3>💎 钻石赞助商</h3>
 					<p>
-						We'd like to thank all of our sponsors, who help make this project possible.
-						Below are our Diamond level sponsors, without whom we would not be here. Thank you.
+						我们在此感谢所有赞助者，是他们让这个项目变为可能。
+						下方列出的是钻石级别赞助商，如果没有他们，我们也不会在这里。十分感谢。
 					<ul class="sponsors">
 						<li>
 							<a href="https://www.newgrounds.com/" target="_blank" rel="nofollow">
@@ -538,10 +533,19 @@ title: Ruffle
 								<img src="{{ "/assets/sponsors/armorgames.png" | relative_url }}" class="img-fluid">
 							</a>
 						</li>
+						<li>
+							<a href="https://www.ondaeduca.com/" target="_blank" rel="nofollow">
+								<img src="{{ "/assets/sponsors/ondaeduca.png" | relative_url }}" class="img-fluid">
+							</a>
+						</li>
+						<li>
+							<a href="https://www.twoplayergames.org/" target="_blank" rel="nofollow">
+								<img src="{{ "/assets/sponsors/twoplayergames.png" | relative_url }}" class="img-fluid">
+							</a>
+						</li>
 					</ul>
-					<h4 class="text-center">Want to join them? <a href="https://opencollective.com/ruffle"
-							target="_blank">Sponsor Ruffle
-							today!</a></h4>
+					<h4 class="text-center">想要加入他们吗？<a href="https://opencollective.com/ruffle"
+							target="_blank">马上赞助 Ruffle！</a></h4>
 					</p>
 				</div>
 			</div>
